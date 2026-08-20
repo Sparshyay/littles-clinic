@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Services | Little's Clinic | Singasandra & Begur, Bangalore</title>
+  <meta name="description" content="Explore comprehensive pediatric healthcare services at Little's Clinic – newborn care, vaccination, growth monitoring, nutrition counseling, and allergy care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= TOP CONTACT INFO BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar__container">
+      <div class="top-bar__location">
+        <span>📍 Manipal County Road, Begur – Singasandra, Bangalore 560114</span>
+      </div>
+      <div class="top-bar__contact">
+        <a href="tel:+917019204952">📞 +91 7019204952</a>
+        <a href="mailto:littlesclinibengaluru@gmail.com">✉ littlesclinibengaluru@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      
+      <a href="index.html" class="brand-logo" aria-label="Little's Clinic Home">
+        <img src="assets/image.png" alt="Little's Clinic Logo" class="brand-logo__img">
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+          <li class="nav__item"><a href="services.html" class="nav__link active">Services</a></li>
+          <li class="nav__item"><a href="blogs.html" class="nav__link">Blogs</a></li>
+          <li class="nav__item"><a href="index.html#pediatricians" class="nav__link">Pediatricians</a></li>
+          <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+917019204952" class="btn btn--outline">
+          📞 Call Doctor
+        </a>
+        <button onclick="openBookingModal()" class="btn btn--primary">
+          Book Appointment
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner">
+    <div class="container page-banner__container">
+      <span class="badge badge--teal animate-badge">EXPERIENCE EXPERT CARE</span>
+      <h1 class="page-banner__title animate-title">Our Pediatric Healthcare Services</h1>
+      <p class="page-banner__subtitle animate-subtitle">Comprehensive medical services tailored for newborns, infants, toddlers, and adolescents in Bangalore.</p>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES CONTENT ================= -->
+  <section class="services-section" id="services-grid-page">
+    <div class="container">
+      
+      <!-- CATEGORY FILTER TABS -->
+      <div class="service-tabs animate-on-scroll">
+        <button class="tab-btn active" data-filter="all">All Services</button>
+        <button class="tab-btn" data-filter="infant">Newborn & Infant</button>
+        <button class="tab-btn" data-filter="primary">Primary Healthcare</button>
+        <button class="tab-btn" data-filter="wellness">Wellness & Diet</button>
+      </div>
+
+      <div class="services-grid animate-on-scroll">
+        
+        <!-- SERVICE 1 -->
+        <div class="service-card-v2 service-card--pink" data-category="infant">
+          <div class="service-card-v2__image">
+            <img src="assets/service-newborn.png" alt="Newborn Care at Little's Clinic" loading="lazy">
+            <span class="service-card-v2__badge">Infant Care</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Newborn Care & Neonatology</h3>
+            <p class="service-card-v2__desc">Specialized neonatal health evaluations including jaundice screening, cord care, feeding guidance, and birth weight monitoring.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Newborn Jaundice Screening</li>
+              <li>• Feeding & Latch Support</li>
+              <li>• Cord Care & Reflex Evaluations</li>
+            </ul>
+            <button onclick="openServiceModal('newborn')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="service-card-v2 service-card--teal" data-category="primary">
+          <div class="service-card-v2__image">
+            <img src="assets/service-vaccination.png" alt="Child Vaccination at Little's Clinic" loading="lazy">
+            <span class="service-card-v2__badge">Immunization</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Child Vaccination & Immunization</h3>
+            <p class="service-card-v2__desc">Full IAP and WHO approved vaccination schedules with gentle, pain-minimizing techniques and digital records.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• IAP & WHO Approved Schedule</li>
+              <li>• Gentle Pain-Reduction Pricks</li>
+              <li>• Digital Vaccination Card Tracking</li>
+            </ul>
+            <button onclick="openServiceModal('vaccination')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="service-card-v2 service-card--orange" data-category="wellness">
+          <div class="service-card-v2__image">
+            <img src="assets/service-growth.png" alt="Growth & Development Monitoring" loading="lazy">
+            <span class="service-card-v2__badge">Milestones</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Growth & Development Monitoring</h3>
+            <p class="service-card-v2__desc">Routine tracking of height/weight percentiles, motor skills, speech milestones, and cognitive growth assessments.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Height & Weight Percentile Charts</li>
+              <li>• Motor & Speech Milestone Checks</li>
+              <li>• Early Intervention Guidance</li>
+            </ul>
+            <button onclick="openServiceModal('growth')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="service-card-v2 service-card--blue" data-category="primary">
+          <div class="service-card-v2__image">
+            <img src="assets/service-consultation.png" alt="Pediatric Consultation & Sick Visits" loading="lazy">
+            <span class="service-card-v2__badge">Consultation</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Pediatric Consultation & Illness</h3>
+            <p class="service-card-v2__desc">Diagnosis and reassuring treatment for fever, cold, stomach infections, viral rashes, and general childhood health issues.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Acute Fever & Cold Care</li>
+              <li>• Infection Diagnostics</li>
+              <li>• Child-Friendly Doctor Consults</li>
+            </ul>
+            <button onclick="openServiceModal('consultation')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div class="service-card-v2 service-card--purple" data-category="wellness">
+          <div class="service-card-v2__image">
+            <img src="assets/service-nutrition.png" alt="Pediatric Nutrition & Diet Counseling" loading="lazy">
+            <span class="service-card-v2__badge">Nutrition</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Pediatric Nutrition & Diet Counseling</h3>
+            <p class="service-card-v2__desc">Expert dietary advice for toddler picky eaters, infant weaning plans, vitamin & iron deficiency correction, and weight management.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Weaning Food Guidance</li>
+              <li>• Toddler Picky Eating Solutions</li>
+              <li>• Iron & Vitamin Deficiency Care</li>
+            </ul>
+            <button onclick="openServiceModal('nutrition')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 6 -->
+        <div class="service-card-v2 service-card--pink" data-category="wellness">
+          <div class="service-card-v2__image">
+            <img src="assets/service-adolescent.png" alt="Adolescent Care at Little's Clinic" loading="lazy">
+            <span class="service-card-v2__badge">Teen Health</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Adolescent Health Care</h3>
+            <p class="service-card-v2__desc">Comprehensive health checkups for pre-teens and teenagers covering puberty changes, emotional health, and physical exams.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Puberty Growth Guidance</li>
+              <li>• Teen Nutrition & Screen-Time Care</li>
+              <li>• School & Sports Health Exams</li>
+            </ul>
+            <button onclick="openServiceModal('adolescent')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 7 -->
+        <div class="service-card-v2 service-card--teal" data-category="primary">
+          <div class="service-card-v2__image">
+            <img src="assets/service-allergy.png" alt="Childhood Allergy & Asthma Care" loading="lazy">
+            <span class="service-card-v2__badge">Respiratory</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Childhood Allergy & Asthma Care</h3>
+            <p class="service-card-v2__desc">Specialized management for Bangalore seasonal allergies, asthma wheezing, inhaler guidance, nebulization, and eczema.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Wheezing & Asthma Management</li>
+              <li>• Nebulization Therapy in Clinic</li>
+              <li>• Skin Allergy & Eczema Support</li>
+            </ul>
+            <button onclick="openServiceModal('allergy')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+        <!-- SERVICE 8 -->
+        <div class="service-card-v2 service-card--yellow" data-category="wellness">
+          <div class="service-card-v2__image">
+            <img src="assets/service-wellness.png" alt="Preventive Child Wellness Checkups" loading="lazy">
+            <span class="service-card-v2__badge">Preventive</span>
+          </div>
+          <div class="service-card-v2__content">
+            <h3 class="service-card-v2__title">Preventive Child Wellness Checkups</h3>
+            <p class="service-card-v2__desc">Routine annual physical examinations, school admission certificates, and vision & hearing screenings.</p>
+            <ul class="service-card-v2__bullets">
+              <li>• Annual Physical Examinations</li>
+              <li>• Vision & Hearing Screening</li>
+              <li>• School Health Certificates</li>
+            </ul>
+            <button onclick="openServiceModal('wellness')" class="btn btn--outline-primary btn--full btn--sm">View Service Details</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__container">
+      
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="brand-logo footer__logo">
+          <img src="assets/image.png" alt="Little's Clinic Logo" class="brand-logo__img footer__logo-img">
+        </a>
+        <p class="footer__desc">Little’s Clinic – Pediatric and Child Centre on Manipal County Road, Begur – Singasandra, Bangalore. Providing compassionate pediatric care for your children.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blogs.html">Health Blogs</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Services</h4>
+        <ul class="footer__links">
+          <li><a href="services.html">Newborn Care</a></li>
+          <li><a href="services.html">Child Vaccination</a></li>
+          <li><a href="services.html">Growth Monitoring</a></li>
+          <li><a href="services.html">Nutrition Counseling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact Info</h4>
+        <div class="footer__contact-info">
+          <p><strong>📍 Address:</strong> Manipal County Road, Begur – Singasandra, Bangalore 560114</p>
+          <p><strong>📞 Phone:</strong> +91 7019204952</p>
+          <p><strong>✉ Email:</strong> littlesclinibengaluru@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-container">
+        <p>© 2026 Little's Clinic – Pediatric and Child Centre. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SERVICE DETAIL MODAL -->
+  <div class="service-modal-overlay" id="service-detail-modal">
+    <div class="service-modal-content">
+      <button class="modal-close-btn" onclick="closeServiceModal()">&times;</button>
+      <div id="service-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- BOOKING MODAL -->
+  <div class="booking-modal-overlay" id="booking-modal">
+    <div class="booking-modal-content">
+      <button class="modal-close-btn" onclick="closeBookingModal()">&times;</button>
+      <h3 class="modal-title">Book an Appointment at Little's Clinic</h3>
+      <p class="modal-subtitle">Manipal County Road, Begur – Singasandra, Bangalore</p>
+      
+      <form onsubmit="handleModalBookingSubmit(event)">
+        <div class="form-group">
+          <label>Parent Name</label>
+          <input type="text" id="modal-parent-name" required placeholder="Enter Parent Name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Child Name</label>
+            <input type="text" id="modal-child-name" required placeholder="Child's Name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="modal-phone" required placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" id="modal-date" required>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full btn--lg" style="margin-top:12px;">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

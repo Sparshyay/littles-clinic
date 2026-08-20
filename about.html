@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Little's Clinic – Pediatric & Child Centre | Singasandra & Begur, Bangalore</title>
+  <meta name="description" content="Learn about Little's Clinic – Pediatric & Child Centre serving families in Singasandra, Begur, and nearby areas of Bangalore. Expert newborn care, vaccination, and growth monitoring.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= TOP CONTACT INFO BAR ================= -->
+  <div class="top-bar">
+    <div class="container top-bar__container">
+      <div class="top-bar__location">
+        <span>📍 Manipal County Road, Begur – Singasandra, Bangalore 560114</span>
+      </div>
+      <div class="top-bar__contact">
+        <a href="tel:+917019204952">📞 +91 7019204952</a>
+        <a href="mailto:littlesclinibengaluru@gmail.com">✉ littlesclinibengaluru@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      
+      <a href="index.html" class="brand-logo" aria-label="Little's Clinic Home">
+        <img src="assets/image.png" alt="Little's Clinic Logo" class="brand-logo__img">
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link active">About Us</a></li>
+          <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="blogs.html" class="nav__link">Blogs</a></li>
+          <li class="nav__item"><a href="index.html#pediatricians" class="nav__link">Pediatricians</a></li>
+          <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+917019204952" class="btn btn--outline">
+          📞 Call Doctor
+        </a>
+        <button onclick="openBookingModal()" class="btn btn--primary">
+          Book Appointment
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner">
+    <div class="container page-banner__container">
+      <span class="badge badge--pink animate-badge">ABOUT OUR CLINIC</span>
+      <h1 class="page-banner__title animate-title">Little’s Clinic – Pediatric & Child Centre</h1>
+      <p class="page-banner__subtitle animate-subtitle">A trusted healthcare home for growing children and peace of mind for parents in Bangalore.</p>
+    </div>
+  </section>
+
+  <!-- ================= MAIN ABOUT US CONTENT ================= -->
+  <section class="about-section" id="about-detail">
+    <div class="container">
+      
+      <div class="about-grid">
+        
+        <!-- LEFT: MAIN PROMPT SPECIFIED DETAILS -->
+        <div class="about-content animate-on-scroll">
+          <span class="badge badge--teal">WHO WE ARE</span>
+          <h2 class="section-title">Welcome to Little’s Clinic – Pediatric and Child Centre</h2>
+          
+          <div class="about-highlight-box">
+            <p class="about-lead">
+              Welcome to <strong>Little’s Clinic – Pediatric and Child Centre</strong>, a trusted pediatric clinic serving families in <strong>Singasandra, Begur, and nearby areas of Bangalore</strong>.
+            </p>
+            <p class="about-description">
+              We provide comprehensive child healthcare including <strong>newborn care, vaccination services, growth and development monitoring, nutritional guidance, and treatment for common childhood illnesses</strong>. Our clinic offers a child-friendly environment where parents receive expert guidance for their child’s healthy growth and development.
+            </p>
+          </div>
+
+          <!-- KEY CORE VALUES -->
+          <div class="about-features" style="margin-top:24px;">
+            <div class="about-feature-item">
+              <div class="about-feature-icon">👶</div>
+              <div>
+                <h4>Newborn Care</h4>
+                <p>Gentle jaundice screening, infant feeding support, and birth milestone assessments.</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="about-feature-icon">💉</div>
+              <div>
+                <h4>Vaccination Services</h4>
+                <p>IAP & WHO approved pain-reduction vaccination schedules for infants & children.</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="about-feature-icon">📈</div>
+              <div>
+                <h4>Growth & Development</h4>
+                <p>Routine height, weight percentiles, speech, and cognitive milestone tracking.</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="about-feature-icon">🥗</div>
+              <div>
+                <h4>Nutritional Guidance</h4>
+                <p>Tailored diet plans for picky eaters, weaning guidance, and deficiency correction.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row" style="margin-top:24px;">
+            <button onclick="openBookingModal()" class="btn btn--primary">
+              Schedule A Visit
+            </button>
+            <a href="services.html" class="btn btn--outline-primary">
+              View Our Services
+            </a>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: VISUAL CARDS & REASSURANCE STATS -->
+        <div class="about-visual animate-on-scroll">
+          <div class="about-image-card main-img">
+            <img src="assets/hero-indian-3.png" alt="Little's Clinic Pediatric Doctor and Mother with Baby">
+            <div class="about-badge-floating">
+              <span class="badge-number">10,000+</span>
+              <span class="badge-text">Happy Families in Singasandra & Begur</span>
+            </div>
+          </div>
+
+          <div class="about-location-card">
+            <div class="loc-icon">📍</div>
+            <div>
+              <h4>Visit Us Today</h4>
+              <p>Manipal County Road, Begur – Singasandra, Bangalore 560114</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CLINIC ENVIRONMENT & INTERACTIVE GALLERY ================= -->
+  <section class="clinic-environment-section animate-on-scroll">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge--teal">CHILD-FRIENDLY ENVIRONMENT</span>
+        <h2 class="section-title">Designed for Your Child’s Comfort</h2>
+        <p class="section-subtitle">Our clinic is thoughtfully built to alleviate doctor visit anxiety and offer a joyful, clean, and reassuring space.</p>
+      </div>
+
+      <div class="environment-grid">
+        
+        <div class="env-card">
+          <div class="env-card__icon">🧸</div>
+          <h3>Playful Waiting Area</h3>
+          <p>Colorful toys, books, and child-safe seating keep little ones happy while waiting for their turn.</p>
+        </div>
+
+        <div class="env-card">
+          <div class="env-card__icon">✨</div>
+          <h3>Sterile & Hygienic</h3>
+          <p>Strict sanitization protocols following medical standards to ensure 100% infection-free consultations.</p>
+        </div>
+
+        <div class="env-card">
+          <div class="env-card__icon">🩺</div>
+          <h3>Gentle Pediatricians</h3>
+          <p>Our experienced pediatric doctors spend time listening to parents and building warm rapport with children.</p>
+        </div>
+
+        <div class="env-card">
+          <div class="env-card__icon">📍</div>
+          <h3>Nearby Accessibility</h3>
+          <p>Conveniently located on Manipal County Road serving Begur, Singasandra, and Electronic City parents.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__container">
+      
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="brand-logo footer__logo">
+          <img src="assets/image.png" alt="Little's Clinic Logo" class="brand-logo__img footer__logo-img">
+        </a>
+        <p class="footer__desc">Little’s Clinic – Pediatric and Child Centre serving Singasandra, Begur, and nearby areas of Bangalore. Comprehensive newborn care, vaccination, growth monitoring, and pediatric consultation.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blogs.html">Health Blogs</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Services</h4>
+        <ul class="footer__links">
+          <li><a href="services.html">Newborn Care</a></li>
+          <li><a href="services.html">Child Vaccination</a></li>
+          <li><a href="services.html">Growth Monitoring</a></li>
+          <li><a href="services.html">Nutrition Guidance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact Info</h4>
+        <div class="footer__contact-info">
+          <p><strong>📍 Address:</strong> Manipal County Road, Begur – Singasandra, Bangalore 560114</p>
+          <p><strong>📞 Phone:</strong> +91 7019204952</p>
+          <p><strong>✉ Email:</strong> littlesclinibengaluru@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-container">
+        <p>© 2026 Little's Clinic – Pediatric and Child Centre. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="booking-modal-overlay" id="booking-modal">
+    <div class="booking-modal-content">
+      <button class="modal-close-btn" onclick="closeBookingModal()">&times;</button>
+      <h3 class="modal-title">Book an Appointment at Little's Clinic</h3>
+      <p class="modal-subtitle">Manipal County Road, Begur – Singasandra, Bangalore</p>
+      
+      <form onsubmit="handleModalBookingSubmit(event)">
+        <div class="form-group">
+          <label>Parent Name</label>
+          <input type="text" id="modal-parent-name" required placeholder="Enter Parent Name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Child Name</label>
+            <input type="text" id="modal-child-name" required placeholder="Child's Name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="modal-phone" required placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Doctor Choice</label>
+          <select id="modal-doctor">
+            <option value="Dr. Trusha Joshi">Dr. Trusha Joshi (DNB Pediatrics)</option>
+            <option value="Dr. Sudhir U">Dr. Sudhir U (MD Pediatrics, MRCPCH)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" id="modal-date" required>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full btn--lg" style="margin-top:12px;">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
