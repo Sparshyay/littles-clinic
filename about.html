@@ -37,7 +37,25 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="about.html" class="nav__link active">About Us</a></li>
-          <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+          
+          <li class="nav__item nav__item--dropdown">
+            <a href="services.html" class="nav__link">
+              Services <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="services.html#newborn">👶 Newborn Care</a>
+              <a href="services.html#vaccination">💉 Child Vaccination</a>
+              <a href="services.html#growth">📈 Growth & Development</a>
+              <a href="services.html#consultation">🩺 Pediatric Consultation</a>
+              <a href="services.html#nutrition">🍎 Nutrition Counseling</a>
+              <a href="services.html#adolescent">🧍 Adolescent Care</a>
+              <a href="services.html#allergy">🫁 Allergy & Asthma Care</a>
+              <a href="services.html#wellness">☀️ Child Wellness</a>
+              <div class="dropdown-menu-divider"></div>
+              <a href="services.html" style="color:var(--primary);">Explore All Services &rarr;</a>
+            </div>
+          </li>
+
           <li class="nav__item"><a href="blogs.html" class="nav__link">Blogs</a></li>
           <li class="nav__item"><a href="index.html#pediatricians" class="nav__link">Pediatricians</a></li>
           <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
@@ -74,7 +92,6 @@
       
       <div class="about-grid">
         
-        <!-- LEFT: MAIN PROMPT SPECIFIED DETAILS -->
         <div class="about-content animate-on-scroll">
           <span class="badge badge--teal">WHO WE ARE</span>
           <h2 class="section-title">Welcome to Little’s Clinic – Pediatric and Child Centre</h2>
@@ -88,7 +105,6 @@
             </p>
           </div>
 
-          <!-- KEY CORE VALUES -->
           <div class="about-features" style="margin-top:24px;">
             <div class="about-feature-item">
               <div class="about-feature-icon">👶</div>
@@ -134,7 +150,6 @@
 
         </div>
 
-        <!-- RIGHT: VISUAL CARDS & REASSURANCE STATS -->
         <div class="about-visual animate-on-scroll">
           <div class="about-image-card main-img">
             <img src="assets/hero-indian-3.png" alt="Little's Clinic Pediatric Doctor and Mother with Baby">
@@ -222,10 +237,10 @@
       <div class="footer__col">
         <h4 class="footer__heading">Services</h4>
         <ul class="footer__links">
-          <li><a href="services.html">Newborn Care</a></li>
-          <li><a href="services.html">Child Vaccination</a></li>
-          <li><a href="services.html">Growth Monitoring</a></li>
-          <li><a href="services.html">Nutrition Guidance</a></li>
+          <li><a href="services.html#newborn">Newborn Care</a></li>
+          <li><a href="services.html#vaccination">Child Vaccination</a></li>
+          <li><a href="services.html#growth">Growth Monitoring</a></li>
+          <li><a href="services.html#nutrition">Nutrition Guidance</a></li>
         </ul>
       </div>
 
@@ -268,13 +283,6 @@
             <label>Phone Number</label>
             <input type="tel" id="modal-phone" required placeholder="+91 XXXXX XXXXX">
           </div>
-        </div>
-        <div class="form-group">
-          <label>Doctor Choice</label>
-          <select id="modal-doctor">
-            <option value="Dr. Trusha Joshi">Dr. Trusha Joshi (DNB Pediatrics)</option>
-            <option value="Dr. Sudhir U">Dr. Sudhir U (MD Pediatrics, MRCPCH)</option>
-          </select>
         </div>
         <div class="form-group">
           <label>Preferred Date</label>

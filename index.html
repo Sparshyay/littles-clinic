@@ -29,21 +29,43 @@
   <header class="header" id="header">
     <div class="container header__container">
       
+      <!-- LARGER BRAND LOGO -->
       <a href="index.html" class="brand-logo" aria-label="Little's Clinic Home">
         <img src="assets/image.png" alt="Little's Clinic Logo" class="brand-logo__img">
       </a>
 
+      <!-- NAVIGATION LINKS WITH SERVICES DROPDOWN -->
       <nav class="nav" id="main-nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
           <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
-          <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+          
+          <!-- SERVICES DROPDOWN ITEM -->
+          <li class="nav__item nav__item--dropdown">
+            <a href="services.html" class="nav__link">
+              Services <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="services.html#newborn">👶 Newborn Care</a>
+              <a href="services.html#vaccination">💉 Child Vaccination</a>
+              <a href="services.html#growth">📈 Growth & Development</a>
+              <a href="services.html#consultation">🩺 Pediatric Consultation</a>
+              <a href="services.html#nutrition">🍎 Nutrition Counseling</a>
+              <a href="services.html#adolescent">🧍 Adolescent Care</a>
+              <a href="services.html#allergy">🫁 Allergy & Asthma Care</a>
+              <a href="services.html#wellness">☀️ Child Wellness</a>
+              <div class="dropdown-menu-divider"></div>
+              <a href="services.html" style="color:var(--primary);">Explore All Services &rarr;</a>
+            </div>
+          </li>
+
           <li class="nav__item"><a href="blogs.html" class="nav__link">Blogs</a></li>
           <li class="nav__item"><a href="#pediatricians" class="nav__link">Pediatricians</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
 
+      <!-- HEADER ACTIONS -->
       <div class="header__actions">
         <a href="tel:+917019204952" class="btn btn--outline">
           📞 Call Doctor
@@ -59,63 +81,18 @@
     </div>
   </header>
 
-  <!-- ================= HERO CAROUSEL SECTION ================= -->
+  <!-- ================= HERO CAROUSEL SECTION (CLEAN - NO TEXT OVERLAY) ================= -->
   <section class="hero-carousel" id="home">
     <div class="carousel-track" id="carousel-track">
       
       <!-- SLIDE 1 (INDIAN PEDIATRICIAN & CHILD) -->
-      <div class="hero-slide active" style="background-image: url('assets/hero-indian-1.png');">
-        <div class="hero-slide__overlay"></div>
-        <div class="container hero-slide__content">
-          <span class="badge badge--pink animate-badge">SINGASANDRA & BEGUR, BANGALORE</span>
-          <h1 class="hero-title animate-title">Compassionate Pediatric Healthcare For Your Little Ones</h1>
-          <p class="hero-subtitle animate-subtitle">Expert newborn care, pain-free vaccinations, growth monitoring, and gentle pediatric consultations in a warm, child-friendly environment.</p>
-          <div class="hero-actions animate-actions">
-            <button onclick="openBookingModal()" class="btn btn--primary btn--lg">
-              Book Appointment
-            </button>
-            <a href="services.html" class="btn btn--white-pill btn--lg">
-              Explore Our Services
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="hero-slide active" style="background-image: url('assets/hero-indian-1.png');"></div>
 
       <!-- SLIDE 2 (INDIAN PEDIATRIC EXAMINATION) -->
-      <div class="hero-slide" style="background-image: url('assets/hero-indian-2.png');">
-        <div class="hero-slide__overlay"></div>
-        <div class="container hero-slide__content">
-          <span class="badge badge--teal animate-badge">EXPERIENCED PEDIATRIC SPECIALISTS</span>
-          <h1 class="hero-title animate-title">Trusted Healthcare Partners For Growing Families</h1>
-          <p class="hero-subtitle animate-subtitle">Comprehensive child health checkups and personalized medical guidance tailored for every developmental stage.</p>
-          <div class="hero-actions animate-actions">
-            <button onclick="openBookingModal()" class="btn btn--primary btn--lg">
-              Schedule A Visit
-            </button>
-            <a href="#pediatricians" class="btn btn--white-pill btn--lg">
-              Meet Our Doctors
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="hero-slide" style="background-image: url('assets/hero-indian-2.png');"></div>
 
       <!-- SLIDE 3 (INDIAN MOTHER & BABY CONSULTATION) -->
-      <div class="hero-slide" style="background-image: url('assets/hero-indian-3.png');">
-        <div class="hero-slide__overlay"></div>
-        <div class="container hero-slide__content">
-          <span class="badge badge--yellow animate-badge">NEWBORN & INFANT WELLNESS</span>
-          <h1 class="hero-title animate-title">Nurturing Healthy Growth & Peaceful Smiles</h1>
-          <p class="hero-subtitle animate-subtitle">From zero-dose newborn vaccinations to toddler nutrition, we support parents with expert medical advice.</p>
-          <div class="hero-actions animate-actions">
-            <button onclick="openBookingModal()" class="btn btn--primary btn--lg">
-              Consult A Specialist
-            </button>
-            <a href="about.html" class="btn btn--white-pill btn--lg">
-              About Little's Clinic
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="hero-slide" style="background-image: url('assets/hero-indian-3.png');"></div>
 
     </div>
 
@@ -135,7 +112,109 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT PREVIEW SUMMARY ================= -->
+  <!-- ================= SERVICES SECTION (MATCHING SCREENSHOT) ================= -->
+  <section class="services-section" id="services">
+    <div class="container">
+      
+      <div class="section-header text-center animate-on-scroll">
+        <span class="badge badge--teal">OUR SERVICES</span>
+        <h2 class="section-title">Pediatric Services</h2>
+      </div>
+
+      <!-- 8 CARDS GRID MATCHING USER IMAGE -->
+      <div class="service-minimal-grid animate-on-scroll">
+        
+        <!-- CARD 1: NEWBORN CARE -->
+        <a href="services.html#newborn" class="service-minimal-card">
+          <div class="service-icon-circle circle-pink">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF4D79" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3h6v2H9z"/><path d="M8 5h8v2H8z"/><path d="M7 7h10v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V7z"/><line x1="10" y1="12" x2="14" y2="12"/><line x1="10" y1="15" x2="14" y2="15"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Newborn Care</h3>
+        </a>
+
+        <!-- CARD 2: CHILD VACCINATION -->
+        <a href="services.html#vaccination" class="service-minimal-card">
+          <div class="service-icon-circle circle-teal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#20C997" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3a1 1 0 0 1-1.4 0l-2.6-2.6a1 1 0 0 1 0-1.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Child Vaccination</h3>
+        </a>
+
+        <!-- CARD 3: GROWTH & DEVELOPMENT -->
+        <a href="services.html#growth" class="service-minimal-card">
+          <div class="service-icon-circle circle-orange">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Growth & Development</h3>
+        </a>
+
+        <!-- CARD 4: PEDIATRIC CONSULTATION -->
+        <a href="services.html#consultation" class="service-minimal-card">
+          <div class="service-icon-circle circle-blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.8 2.3A.3.3 0 0 0 4.5 2.6V9a4.5 4.5 0 0 0 9 0V2.6a.3.3 0 0 0-.3-.3h-1.4a.3.3 0 0 0-.3.3V9a2.5 2.5 0 0 1-5 0V2.6a.3.3 0 0 0-.3-.3H4.8z"/><path d="M9 13.5v3.25a4.25 4.25 0 0 0 8.5 0v-2.25"/><circle cx="17.5" cy="12.5" r="2"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Pediatric Consultation</h3>
+        </a>
+
+        <!-- CARD 5: NUTRITION COUNSELING -->
+        <a href="services.html#nutrition" class="service-minimal-card">
+          <div class="service-icon-circle circle-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06z"/><path d="M10 2c1 .5 2 2 2 5"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Nutrition Counseling</h3>
+        </a>
+
+        <!-- CARD 6: ADOLESCENT CARE -->
+        <a href="services.html#adolescent" class="service-minimal-card">
+          <div class="service-icon-circle circle-rose">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F43F5E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M16 11l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Adolescent Care</h3>
+        </a>
+
+        <!-- CARD 7: ALLERGY & ASTHMA CARE -->
+        <a href="services.html#allergy" class="service-minimal-card">
+          <div class="service-icon-circle circle-mint">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4v16"/><path d="M7 8a4 4 0 0 0-4 4v3a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4v-7"/><path d="M17 8a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4h-1a4 4 0 0 1-4-4v-7"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Allergy & Asthma Care</h3>
+        </a>
+
+        <!-- CARD 8: CHILD WELLNESS -->
+        <a href="services.html#wellness" class="service-minimal-card">
+          <div class="service-icon-circle circle-yellow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/>
+            </svg>
+          </div>
+          <h3 class="service-minimal-title">Child Wellness</h3>
+        </a>
+
+      </div>
+
+      <!-- VIEW ALL SERVICES BUTTON -->
+      <div style="text-align:center;" class="animate-on-scroll">
+        <a href="services.html" class="btn btn--outline-primary btn--lg">View All Services &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SUMMARY SECTION ================= -->
   <section class="about-section" id="about-summary">
     <div class="container">
       <div class="about-grid">
@@ -160,71 +239,6 @@
             <img src="assets/hero-indian-3.png" alt="Little's Clinic Pediatric Doctor and Mother with Baby">
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SERVICES PREVIEW ================= -->
-  <section class="services-section" id="services-preview">
-    <div class="container">
-      <div class="section-header text-center animate-on-scroll">
-        <span class="badge badge--teal">OUR SERVICES</span>
-        <h2 class="section-title">Pediatric Services</h2>
-        <p class="section-subtitle">Providing expert newborn care, vaccinations, growth monitoring, and pediatric consultations.</p>
-      </div>
-
-      <div class="services-grid animate-on-scroll">
-        <!-- SERVICE 1 -->
-        <div class="service-card-v2 service-card--pink">
-          <div class="service-card-v2__image">
-            <img src="assets/service-newborn.png" alt="Newborn Care">
-          </div>
-          <div class="service-card-v2__content">
-            <h3 class="service-card-v2__title">Newborn Care</h3>
-            <p class="service-card-v2__desc">Specialized jaundice screening, cord care, feeding guidance, and weight checks for babies.</p>
-            <a href="services.html" class="btn btn--outline-primary btn--full btn--sm">Explore Services</a>
-          </div>
-        </div>
-
-        <!-- SERVICE 2 -->
-        <div class="service-card-v2 service-card--teal">
-          <div class="service-card-v2__image">
-            <img src="assets/service-vaccination.png" alt="Child Vaccination">
-          </div>
-          <div class="service-card-v2__content">
-            <h3 class="service-card-v2__title">Child Vaccination</h3>
-            <p class="service-card-v2__desc">IAP-approved vaccination schedules with gentle, pain-reduction injection techniques.</p>
-            <a href="services.html" class="btn btn--outline-primary btn--full btn--sm">Explore Services</a>
-          </div>
-        </div>
-
-        <!-- SERVICE 3 -->
-        <div class="service-card-v2 service-card--orange">
-          <div class="service-card-v2__image">
-            <img src="assets/service-growth.png" alt="Growth & Development">
-          </div>
-          <div class="service-card-v2__content">
-            <h3 class="service-card-v2__title">Growth & Development</h3>
-            <p class="service-card-v2__desc">Continuous physical and cognitive development monitoring with milestone screening.</p>
-            <a href="services.html" class="btn btn--outline-primary btn--full btn--sm">Explore Services</a>
-          </div>
-        </div>
-
-        <!-- SERVICE 4 -->
-        <div class="service-card-v2 service-card--blue">
-          <div class="service-card-v2__image">
-            <img src="assets/service-consultation.png" alt="Pediatric Consultation">
-          </div>
-          <div class="service-card-v2__content">
-            <h3 class="service-card-v2__title">Pediatric Consultation</h3>
-            <p class="service-card-v2__desc">Treatment for fever, cold, stomach infections, rashes, and acute childhood conditions.</p>
-            <a href="services.html" class="btn btn--outline-primary btn--full btn--sm">Explore Services</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top:32px;">
-        <a href="services.html" class="btn btn--primary btn--lg">View All 8 Pediatric Services &rarr;</a>
       </div>
     </div>
   </section>
@@ -372,7 +386,7 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT & BOOKING SECTION ================= -->
+  <!-- ================= CONTACT & LIGHT THEME BOOKING SECTION ================= -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="contact-grid">
@@ -429,7 +443,7 @@
 
         </div>
 
-        <!-- RIGHT SIDE: BOOKING FORM CARD -->
+        <!-- RIGHT SIDE: LIGHT THEME BOOKING FORM CARD -->
         <div class="booking-card animate-on-scroll">
           <h3 class="booking-card__title">Book an appointment</h3>
           <p class="booking-card__desc">Choose a time that works for your family. We'll guide you through every step.</p>
@@ -466,6 +480,9 @@
                 <option value="Growth Monitoring">Growth & Development Monitoring</option>
                 <option value="Pediatric Consultation">Pediatric Illness Consultation</option>
                 <option value="Nutrition Counseling">Pediatric Nutrition Counseling</option>
+                <option value="Adolescent Care">Adolescent Care</option>
+                <option value="Allergy Care">Allergy & Asthma Care</option>
+                <option value="Child Wellness">Child Wellness</option>
               </select>
             </div>
 
@@ -519,10 +536,10 @@
       <div class="footer__col">
         <h4 class="footer__heading">Our Services</h4>
         <ul class="footer__links">
-          <li><a href="services.html">Newborn Care</a></li>
-          <li><a href="services.html">Child Vaccination</a></li>
-          <li><a href="services.html">Growth & Development</a></li>
-          <li><a href="services.html">Pediatric Consultation</a></li>
+          <li><a href="services.html#newborn">Newborn Care</a></li>
+          <li><a href="services.html#vaccination">Child Vaccination</a></li>
+          <li><a href="services.html#growth">Growth & Development</a></li>
+          <li><a href="services.html#consultation">Pediatric Consultation</a></li>
         </ul>
       </div>
 

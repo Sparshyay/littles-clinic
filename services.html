@@ -37,7 +37,26 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
-          <li class="nav__item"><a href="services.html" class="nav__link active">Services</a></li>
+          
+          <!-- SERVICES DROPDOWN ITEM -->
+          <li class="nav__item nav__item--dropdown">
+            <a href="services.html" class="nav__link active">
+              Services <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="services.html#newborn">👶 Newborn Care</a>
+              <a href="services.html#vaccination">💉 Child Vaccination</a>
+              <a href="services.html#growth">📈 Growth & Development</a>
+              <a href="services.html#consultation">🩺 Pediatric Consultation</a>
+              <a href="services.html#nutrition">🍎 Nutrition Counseling</a>
+              <a href="services.html#adolescent">🧍 Adolescent Care</a>
+              <a href="services.html#allergy">🫁 Allergy & Asthma Care</a>
+              <a href="services.html#wellness">☀️ Child Wellness</a>
+              <div class="dropdown-menu-divider"></div>
+              <a href="services.html" style="color:var(--primary);">Explore All Services &rarr;</a>
+            </div>
+          </li>
+
           <li class="nav__item"><a href="blogs.html" class="nav__link">Blogs</a></li>
           <li class="nav__item"><a href="index.html#pediatricians" class="nav__link">Pediatricians</a></li>
           <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
@@ -82,8 +101,8 @@
 
       <div class="services-grid animate-on-scroll">
         
-        <!-- SERVICE 1 -->
-        <div class="service-card-v2 service-card--pink" data-category="infant">
+        <!-- SERVICE 1: NEWBORN -->
+        <div class="service-card-v2 service-card--pink" id="newborn" data-category="infant">
           <div class="service-card-v2__image">
             <img src="assets/service-newborn.png" alt="Newborn Care at Little's Clinic" loading="lazy">
             <span class="service-card-v2__badge">Infant Care</span>
@@ -100,8 +119,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 2 -->
-        <div class="service-card-v2 service-card--teal" data-category="primary">
+        <!-- SERVICE 2: VACCINATION -->
+        <div class="service-card-v2 service-card--teal" id="vaccination" data-category="primary">
           <div class="service-card-v2__image">
             <img src="assets/service-vaccination.png" alt="Child Vaccination at Little's Clinic" loading="lazy">
             <span class="service-card-v2__badge">Immunization</span>
@@ -118,8 +137,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 3 -->
-        <div class="service-card-v2 service-card--orange" data-category="wellness">
+        <!-- SERVICE 3: GROWTH -->
+        <div class="service-card-v2 service-card--orange" id="growth" data-category="wellness">
           <div class="service-card-v2__image">
             <img src="assets/service-growth.png" alt="Growth & Development Monitoring" loading="lazy">
             <span class="service-card-v2__badge">Milestones</span>
@@ -136,8 +155,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 4 -->
-        <div class="service-card-v2 service-card--blue" data-category="primary">
+        <!-- SERVICE 4: CONSULTATION -->
+        <div class="service-card-v2 service-card--blue" id="consultation" data-category="primary">
           <div class="service-card-v2__image">
             <img src="assets/service-consultation.png" alt="Pediatric Consultation & Sick Visits" loading="lazy">
             <span class="service-card-v2__badge">Consultation</span>
@@ -154,8 +173,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 5 -->
-        <div class="service-card-v2 service-card--purple" data-category="wellness">
+        <!-- SERVICE 5: NUTRITION -->
+        <div class="service-card-v2 service-card--purple" id="nutrition" data-category="wellness">
           <div class="service-card-v2__image">
             <img src="assets/service-nutrition.png" alt="Pediatric Nutrition & Diet Counseling" loading="lazy">
             <span class="service-card-v2__badge">Nutrition</span>
@@ -172,8 +191,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 6 -->
-        <div class="service-card-v2 service-card--pink" data-category="wellness">
+        <!-- SERVICE 6: ADOLESCENT -->
+        <div class="service-card-v2 service-card--pink" id="adolescent" data-category="wellness">
           <div class="service-card-v2__image">
             <img src="assets/service-adolescent.png" alt="Adolescent Care at Little's Clinic" loading="lazy">
             <span class="service-card-v2__badge">Teen Health</span>
@@ -190,8 +209,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 7 -->
-        <div class="service-card-v2 service-card--teal" data-category="primary">
+        <!-- SERVICE 7: ALLERGY -->
+        <div class="service-card-v2 service-card--teal" id="allergy" data-category="primary">
           <div class="service-card-v2__image">
             <img src="assets/service-allergy.png" alt="Childhood Allergy & Asthma Care" loading="lazy">
             <span class="service-card-v2__badge">Respiratory</span>
@@ -208,8 +227,8 @@
           </div>
         </div>
 
-        <!-- SERVICE 8 -->
-        <div class="service-card-v2 service-card--yellow" data-category="wellness">
+        <!-- SERVICE 8: WELLNESS -->
+        <div class="service-card-v2 service-card--yellow" id="wellness" data-category="wellness">
           <div class="service-card-v2__image">
             <img src="assets/service-wellness.png" alt="Preventive Child Wellness Checkups" loading="lazy">
             <span class="service-card-v2__badge">Preventive</span>
@@ -256,10 +275,10 @@
       <div class="footer__col">
         <h4 class="footer__heading">Services</h4>
         <ul class="footer__links">
-          <li><a href="services.html">Newborn Care</a></li>
-          <li><a href="services.html">Child Vaccination</a></li>
-          <li><a href="services.html">Growth Monitoring</a></li>
-          <li><a href="services.html">Nutrition Counseling</a></li>
+          <li><a href="services.html#newborn">Newborn Care</a></li>
+          <li><a href="services.html#vaccination">Child Vaccination</a></li>
+          <li><a href="services.html#growth">Growth Monitoring</a></li>
+          <li><a href="services.html#nutrition">Nutrition Counseling</a></li>
         </ul>
       </div>
 
