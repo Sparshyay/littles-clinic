@@ -34,7 +34,7 @@
   --bg-white: #FFFFFF;
   --bg-subtle: #F4F8FA;
   --bg-warm: #E3F2FD;             /* Palette light sky blue tint */
-  --bg-footer: #0D47A1;           /* Deep Royal Blue footer */
+  --bg-footer: #009688;           /* Solid Teal Footer */
 
   /* Typography Colors */
   --text-main: #0D47A1;
@@ -1865,8 +1865,8 @@ input[type="button"]:active,
    14. FOOTER
    -------------------------------------------------------------------------- */
 .footer {
-  background-color: var(--bg-footer);
-  color: #94A3B8;
+  background-color: #009688;
+  color: #FFFFFF;
   padding-top: var(--space-16);
 }
 
@@ -1888,6 +1888,7 @@ input[type="button"]:active,
 .footer__desc {
   font-size: 0.875rem;
   line-height: 1.6;
+  color: #E0F2F1;
   margin-bottom: var(--space-6);
 }
 
@@ -1897,25 +1898,28 @@ input[type="button"]:active,
 }
 
 .social-icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--radius-full);
-  background-color: rgba(255, 255, 255, 0.08);
-  color: white;
+  background-color: #FFFFFF;
+  color: #009688;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.25s ease;
+  font-weight: 700;
+  transition: all 0.25s ease;
 }
 
 .social-icon:hover {
-  background-color: var(--primary);
+  background-color: #004D40;
+  color: #FFFFFF;
+  transform: translateY(-2px);
 }
 
 .footer__heading {
   font-size: 1.05rem;
   font-weight: 800;
-  color: white;
+  color: #FFFFFF;
   margin-bottom: var(--space-6);
 }
 
@@ -1925,23 +1929,39 @@ input[type="button"]:active,
 
 .footer__links a {
   font-size: 0.875rem;
-  color: #94A3B8;
+  color: #E0F2F1;
+  transition: color 0.2s ease;
 }
 
 .footer__links a:hover {
-  color: white;
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .footer__contact-info p {
   font-size: 0.85rem;
+  color: #E0F2F1;
   margin-bottom: var(--space-3);
   line-height: 1.5;
 }
 
+.footer__contact-info strong {
+  color: #FFFFFF;
+}
+
 .footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   padding: var(--space-6) 0;
   font-size: 0.8125rem;
+  color: #E0F2F1;
+}
+
+.footer__bottom a {
+  color: #FFFFFF;
+}
+
+.footer__bottom a:hover {
+  text-decoration: underline;
 }
 
 .footer__bottom-container {
