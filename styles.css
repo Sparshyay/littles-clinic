@@ -6,44 +6,45 @@
    1. DESIGN TOKENS (CHILD-FRIENDLY & MODERN PALETTE)
    -------------------------------------------------------------------------- */
 :root {
-  --primary: #FF4D79;             /* Loving Warm Pink */
-  --primary-hover: #E63963;
-  --primary-light: #FFF0F3;
-  --primary-gradient: linear-gradient(135deg, #FF4D79 0%, #FF8A3D 100%);
-  --primary-gradient-hover: linear-gradient(135deg, #E63963 0%, #F07525 100%);
+  --primary: #2196F3;             /* Primary Vibrant Blue */
+  --primary-hover: #1976D2;       /* Solid Darker Blue for hover */
+  --primary-light: #E3F2FD;       /* Soft Sky Light background tint */
+  --primary-dark: #0D47A1;        /* Deep Royal Navy Blue */
+  --primary-gradient: #2196F3;    /* Solid primary blue (no gradients) */
+  --primary-gradient-hover: #1976D2;
   
-  --secondary-orange: #FF8A3D;    /* Cheerful Warm Orange */
-  --teal-accent: #20C997;          /* Mint Teal Banner background */
-  --teal-accent-dark: #129B73;
-  --teal-accent-light: #E6F9F5;
+  --secondary-orange: #90CAF9;    /* Soft Light Blue Accent */
+  --teal-accent: #009688;          /* Solid Teal for active/click state */
+  --teal-accent-dark: #00796B;
+  --teal-accent-light: #E0F2F1;
 
-  --blue-soft: #38BDF8;
-  --blue-soft-light: #F0F9FF;
+  --blue-soft: #90CAF9;
+  --blue-soft-light: #E3F2FD;
 
-  --purple-soft: #A855F7;
-  --purple-soft-light: #F3E8FF;
+  --purple-soft: #2196F3;
+  --purple-soft-light: #E3F2FD;
 
-  --yellow-soft: #FFD166;
-  --yellow-soft-light: #FFFBEB;
+  --yellow-soft: #90CAF9;
+  --yellow-soft-light: #E3F2FD;
 
-  --navy-dark: #1E293B;            /* Header / Primary Text */
-  --navy-card: #253342;            /* Dark Booking Card Background */
+  --navy-dark: #0D47A1;            /* Header / Primary Text / Dark Section */
+  --navy-card: #1565C0;            /* Dark Card Background */
 
   /* Neutral Backgrounds */
   --bg-white: #FFFFFF;
-  --bg-subtle: #F8FAFC;
-  --bg-warm: #FFF9FA;
-  --bg-footer: #151F2B;
+  --bg-subtle: #F4F8FA;
+  --bg-warm: #E3F2FD;             /* Palette light sky blue tint */
+  --bg-footer: #0D47A1;           /* Deep Royal Blue footer */
 
   /* Typography Colors */
-  --text-main: #1E293B;
-  --text-muted: #64748B;
-  --text-light: #94A3B8;
+  --text-main: #0D47A1;
+  --text-muted: #475569;
+  --text-light: #90CAF9;
   --text-white: #FFFFFF;
 
   /* Borders & Dividers */
-  --border-color: #E2E8F0;
-  --border-light: #F1F5F9;
+  --border-color: #90CAF9;
+  --border-light: #E3F2FD;
 
   /* Typography Tokens */
   --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -68,10 +69,10 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(30, 41, 59, 0.06);
-  --shadow-lg: 0 12px 32px rgba(30, 41, 59, 0.08);
-  --shadow-hover: 0 16px 32px rgba(255, 77, 121, 0.16);
+  --shadow-sm: 0 1px 3px rgba(13, 71, 161, 0.06);
+  --shadow-md: 0 4px 12px rgba(13, 71, 161, 0.08);
+  --shadow-lg: 0 12px 32px rgba(13, 71, 161, 0.12);
+  --shadow-hover: 0 16px 32px rgba(33, 150, 243, 0.22);
 
   /* Container Width */
   --container-max-width: 1240px;
@@ -466,7 +467,7 @@ ul {
   margin-right: auto;
 }
 
-/* Buttons */
+/* Buttons - Solid Teal on Hover and Active/Click */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -478,31 +479,59 @@ ul {
   font-weight: 700;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   white-space: nowrap;
+  user-select: none;
 }
 
-.btn--primary {
-  background: var(--primary-gradient);
+.btn--primary,
+.btn--pink-gradient {
+  background-color: var(--primary);
+  background: var(--primary);
   color: var(--text-white);
-  box-shadow: 0 4px 14px rgba(255, 77, 121, 0.35);
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(33, 150, 243, 0.35);
 }
 
-.btn--primary:hover {
+.btn--primary:hover,
+.btn--pink-gradient:hover {
+  background-color: var(--teal-accent);
+  background: var(--teal-accent);
+  border-color: var(--teal-accent);
+  color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 77, 121, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 150, 136, 0.4);
+}
+
+.btn--primary:active,
+.btn--pink-gradient:active {
+  background-color: var(--teal-accent-dark) !important;
+  background: var(--teal-accent-dark) !important;
+  border-color: var(--teal-accent-dark) !important;
+  color: #FFFFFF !important;
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(0, 121, 107, 0.4);
 }
 
 .btn--outline {
   border-color: var(--border-color);
-  color: var(--text-main);
+  color: var(--navy-dark);
   background-color: transparent;
 }
 
 .btn--outline:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background-color: var(--primary-light);
+  border-color: var(--teal-accent);
+  color: #FFFFFF;
+  background-color: var(--teal-accent);
+  background: var(--teal-accent);
+}
+
+.btn--outline:active {
+  background-color: var(--teal-accent-dark) !important;
+  background: var(--teal-accent-dark) !important;
+  border-color: var(--teal-accent-dark) !important;
+  color: #FFFFFF !important;
+  transform: translateY(0) scale(0.98);
 }
 
 .btn--outline-primary {
@@ -512,31 +541,40 @@ ul {
 }
 
 .btn--outline-primary:hover {
-  background: var(--primary-gradient);
-  color: var(--text-white);
-  border-color: transparent;
+  background-color: var(--teal-accent);
+  background: var(--teal-accent);
+  color: #FFFFFF;
+  border-color: var(--teal-accent);
 }
 
-.btn--pink-gradient {
-  background: var(--primary-gradient);
-  color: var(--text-white);
-  box-shadow: 0 4px 16px rgba(255, 77, 121, 0.4);
-}
-
-.btn--pink-gradient:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 77, 121, 0.5);
+.btn--outline-primary:active {
+  background-color: var(--teal-accent-dark) !important;
+  background: var(--teal-accent-dark) !important;
+  border-color: var(--teal-accent-dark) !important;
+  color: #FFFFFF !important;
+  transform: translateY(0) scale(0.98);
 }
 
 .btn--white-pill {
   background-color: #FFFFFF;
   color: var(--navy-dark);
+  border-color: #FFFFFF;
   box-shadow: var(--shadow-md);
 }
 
 .btn--white-pill:hover {
-  background-color: #F1F5F9;
+  background-color: var(--teal-accent);
+  color: #FFFFFF;
+  border-color: var(--teal-accent);
   transform: translateY(-2px);
+}
+
+.btn--white-pill:active {
+  background-color: var(--teal-accent-dark) !important;
+  background: var(--teal-accent-dark) !important;
+  border-color: var(--teal-accent-dark) !important;
+  color: #FFFFFF !important;
+  transform: translateY(0) scale(0.98);
 }
 
 .btn--lg {
@@ -551,6 +589,35 @@ ul {
 
 .btn--full {
   width: 100%;
+}
+
+/* Global button hover & click/active state rule for solid teal */
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.carousel-control:hover,
+.share-btn:hover {
+  background-color: #009688;
+  background: #009688;
+  border-color: #009688;
+  color: #FFFFFF;
+}
+
+button:active,
+.btn:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.carousel-control:active,
+.share-btn:active,
+.tab-btn:active,
+.modal-close-btn:active,
+.blog-modal-close:active {
+  background-color: #00796B !important;
+  background: #00796B !important;
+  border-color: #00796B !important;
+  color: #FFFFFF !important;
+  transform: scale(0.97);
 }
 
 /* --------------------------------------------------------------------------
@@ -901,19 +968,33 @@ ul {
   padding: 10px 22px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-color);
-  background-color: var(--bg-white);
-  color: var(--text-muted);
+  background-color: var(--primary-light);
+  color: var(--navy-dark);
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
-.tab-btn:hover, .tab-btn.active {
-  background: var(--primary-gradient);
+.tab-btn:hover {
+  background-color: var(--blue-soft);
+  color: var(--navy-dark);
+  border-color: var(--primary);
+}
+
+.tab-btn.active {
+  background-color: var(--primary);
+  background: var(--primary);
   color: white;
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(255, 77, 121, 0.3);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.tab-btn:active {
+  background-color: #009688 !important;
+  background: #009688 !important;
+  color: #FFFFFF !important;
+  border-color: #009688 !important;
 }
 
 .services-grid {
@@ -1578,7 +1659,7 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-full);
-  background: var(--primary-gradient);
+  background: var(--primary);
   color: white;
   font-weight: 800;
   display: flex;
@@ -1587,8 +1668,8 @@ ul {
   font-size: 0.9rem;
 }
 
-.author-avatar--2 { background: linear-gradient(135deg, #20C997 0%, #0EA5E9 100%); }
-.author-avatar--3 { background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%); }
+.author-avatar--2 { background: var(--blue-soft); color: var(--navy-dark); }
+.author-avatar--3 { background: var(--teal-accent); color: white; }
 
 .author-name {
   font-size: 0.95rem;
@@ -1603,7 +1684,7 @@ ul {
 
 /* Stats Banner */
 .stats-banner {
-  background: linear-gradient(135deg, #20C997 0%, #129B73 100%);
+  background: var(--navy-dark);
   color: white;
   padding: var(--space-10) 0;
 }
