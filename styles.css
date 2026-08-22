@@ -1862,17 +1862,29 @@ input[type="button"]:active,
 }
 
 /* --------------------------------------------------------------------------
-   14. FOOTER
+   14. STITCH ENHANCED ATTRACTIVE FOOTER
    -------------------------------------------------------------------------- */
 .footer {
-  background-color: #009688;
+  background-color: var(--navy-dark);
   color: #FFFFFF;
   padding-top: var(--space-16);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--teal-accent) 50%, var(--blue-soft) 100%);
 }
 
 .footer__container {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.4fr 1fr 1.1fr 1.3fr;
   gap: var(--space-10);
   padding-bottom: var(--space-12);
 }
@@ -1886,82 +1898,137 @@ input[type="button"]:active,
 }
 
 .footer__desc {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: #E0F2F1;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #D0E3FF;
   margin-bottom: var(--space-6);
 }
 
-.footer__socials {
+.footer-emergency-box {
   display: flex;
-  gap: var(--space-3);
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 18px;
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-2);
 }
 
-.social-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-full);
-  background-color: #FFFFFF;
-  color: #009688;
+.emergency-icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--teal-accent);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  transition: all 0.25s ease;
+  flex-shrink: 0;
 }
 
-.social-icon:hover {
-  background-color: #004D40;
+.emergency-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #90CAF9;
+}
+
+.emergency-number {
+  font-size: 1.1rem;
+  font-weight: 800;
   color: #FFFFFF;
-  transform: translateY(-2px);
+  display: block;
+  line-height: 1.2;
+}
+
+.emergency-number:hover {
+  color: var(--teal-accent);
 }
 
 .footer__heading {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #FFFFFF;
   margin-bottom: var(--space-6);
+  position: relative;
+  padding-bottom: 8px;
 }
 
-.footer__links li {
-  margin-bottom: var(--space-3);
+.footer__heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  background-color: var(--teal-accent);
+  border-radius: var(--radius-full);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .footer__links a {
-  font-size: 0.875rem;
-  color: #E0F2F1;
-  transition: color 0.2s ease;
+  font-size: 0.9rem;
+  color: #D0E3FF;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.link-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--teal-accent);
+  opacity: 0.6;
+  transition: all 0.2s ease;
 }
 
 .footer__links a:hover {
   color: #FFFFFF;
-  text-decoration: underline;
+  transform: translateX(4px);
+}
+
+.footer__links a:hover .link-dot {
+  opacity: 1;
+  transform: scale(1.5);
+  background-color: var(--blue-soft);
 }
 
 .footer__contact-info p {
-  font-size: 0.85rem;
-  color: #E0F2F1;
-  margin-bottom: var(--space-3);
-  line-height: 1.5;
+  font-size: 0.875rem;
+  color: #D0E3FF;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 .footer__contact-info strong {
   color: #FFFFFF;
 }
 
-.footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
-  padding: var(--space-6) 0;
-  font-size: 0.8125rem;
-  color: #E0F2F1;
+.footer__contact-info a {
+  color: #90CAF9;
 }
 
-.footer__bottom a {
+.footer__contact-info a:hover {
   color: #FFFFFF;
+  text-decoration: underline;
 }
 
-.footer__bottom a:hover {
-  text-decoration: underline;
+/* Footer Bottom Bar */
+.footer__bottom {
+  padding: var(--space-5) 0;
+  font-size: 0.8125rem;
+  color: #90CAF9;
 }
 
 .footer__bottom-container {
@@ -1970,6 +2037,20 @@ input[type="button"]:active,
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-4);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-bottom-links a {
+  color: #90CAF9;
+}
+
+.footer-bottom-links a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------------
